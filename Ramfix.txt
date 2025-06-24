@@ -1,0 +1,11 @@
+nano source/core/uinput.h
+
+#include <string>
+#include <map>
+#include <memory> // Add this line!
+
+#include <libudev.h> // Already there from previous fix
+#include <linux/uinput.h>
+
+// ... rest of the file ...
+

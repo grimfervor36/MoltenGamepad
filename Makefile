@@ -153,3 +153,9 @@ documentation/moltengamepad.1: documentation/moltengamepad.1.md
 .PHONY: debian
 debian:
 	dpkg-buildpackage -rfakeroot -sa -uc -us
+
+# ... other Makefile content ...
+
+CXXFLAGS := -Wall -Wextra -Wpedantic -Wno-long-long -O2 -g $(ARCH_FLAGS) $(LIBEVDEV_CFLAGS) $(LTO_FLAGS) $(SANITIZE_FLAGS) $(OPTIONAL_WARNING_FLAGS) -std=c++11 -D_GLIBCXX_USE_CXX11_ABI=0
+
+# ... rest of Makefile content ...
